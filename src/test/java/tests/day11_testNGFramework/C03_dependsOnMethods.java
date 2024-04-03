@@ -32,6 +32,7 @@ public class C03_dependsOnMethods {
         ikinci adimi Run etmek istedigimizde
         oncelikle bagimli oldugu ilk adimin calismasini saglar
         ilk adim calisip PASSED olursa, ikinci adim calisir
+        Bu durum 2 adim icin gecerlidir, 3 adim veya daha fazla olursa calismaz
       3-dependsOnMethods , priority gibi calisma sirasini duzenlemez
         Ancak, calisma sirasi bir method'a geldiginde
         o method'un bagli oldugu baska bir method varsa
