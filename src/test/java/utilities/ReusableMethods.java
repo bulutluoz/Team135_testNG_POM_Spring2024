@@ -41,13 +41,13 @@ public class ReusableMethods {
         return donusturulenList;
     }
 
-    public static void switchWindow(WebDriver driver, String hedefUrl){
+    public static void switchWindow(String hedefUrl){
 
         // birden fazla window acik iken bu method calisacak
 
         // 1- acik olan tum window'larin WHD'lerini bir Set olarak kaydedelim
 
-        Set<String> tumWHDSeti = driver.getWindowHandles();
+        Set<String> tumWHDSeti = Driver.getDriver().getWindowHandles();
 
         // 2- bir for-each loop ile, her bir WHD'ini kullanip
         //    o window'a gidelim, eger gittigimiz window'da Url hedefUrl'e esit ise
@@ -56,9 +56,9 @@ public class ReusableMethods {
         for (String eachWHD : tumWHDSeti
              ) {
 
-            driver.switchTo().window(eachWHD);
+            Driver.getDriver().switchTo().window(eachWHD);
 
-            if (driver.getCurrentUrl().equals(hedefUrl)){
+            if (Driver.getDriver().getCurrentUrl().equals(hedefUrl)){
                 break;
             }
 

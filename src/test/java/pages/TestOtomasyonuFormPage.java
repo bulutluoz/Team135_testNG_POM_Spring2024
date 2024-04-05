@@ -19,4 +19,19 @@ public class TestOtomasyonuFormPage {
 
     @FindBy(xpath = "(//select[@class='form-control'])[3]")
     public WebElement yilDropdownElementi;
+
+    @FindBy(xpath = "//*[@for='gridCheck5']")
+    public WebElement sirtAgrisiYaziElementi;
+
+    @FindBy(xpath = "//*[@id='gridCheck5']")
+    public WebElement sirtAgrisiCheckbox;
+
+    @FindBy(xpath = "//*[@id='gridCheck4']")
+    public WebElement carpintiCheckbox;
+
+    @FindBy(xpath = "//*[@id='hastalikCheck2']")
+    public WebElement sekerCheckbox;
+
+    @FindBy(xpath = "//*[@id='hastalikCheck7']")
+    public WebElement epilepsiCheckbox;
 }
