@@ -22,4 +22,19 @@ public class TestOtomasyonuPage {
     @FindBy(id = "priceproduct")
     public WebElement urunFiyatElementi;
 
+    @FindBy(xpath = "//*[text()='Account']")
+    public WebElement accountLinki;
+
+    @FindBy(id = "email")
+    public WebElement emailKutusu;
+
+    @FindBy(id = "password")
+    public WebElement passwordKutusu;
+
+    @FindBy(id ="submitlogin")
+    public WebElement loginButonu;
+
+    @FindBy(xpath = "(//*[text()='Logout'])[2]")
+    public WebElement logoutButonu;
+
 }
