@@ -1,11 +1,7 @@
 package tests.day13_TestNG_Assertions;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.TestOtomasyonuPage;
@@ -25,11 +21,13 @@ public class C02_UrunSepetiTesti {
         TestOtomasyonuPage testOtomasyonuPage = new TestOtomasyonuPage();
         testOtomasyonuPage.aramaKutusu.sendKeys(ConfigReader.getProperty("toAranacakKelime")+ Keys.ENTER);
         //3- Listelenen sonuclardan ilkini tiklayin
+        ReusableMethods.bekle(1);
         testOtomasyonuPage.bulunanUrunElementleriList.get(0).click();
         //4- urun ismini kaydedin ve sepete ekleyin
         String secilenUrunIsmi = testOtomasyonuPage.urunIsimElementi.getText();
+        ReusableMethods.bekle(1);
         testOtomasyonuPage.addToCartButonu.click();
-        ReusableMethods.bekle(3);
+        ReusableMethods.bekle(5);
 
         //5- your cart linkine tiklayin
         testOtomasyonuPage.yourCartLinki.click();

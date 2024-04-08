@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import pages.TestOtomasyonuPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class C01_NegativeLoginTesti {
 
@@ -49,7 +50,7 @@ public class C01_NegativeLoginTesti {
         //3	- gecersiz username, gecerli password
         testOtomasyonuPage.emailKutusu.sendKeys(ConfigReader.getProperty("toGecersizEmail"));
         testOtomasyonuPage.passwordKutusu.sendKeys(ConfigReader.getProperty("toGecerliPassword"));
-
+        ReusableMethods.bekle(1);
         //4- Login butonuna basarak login olun
         testOtomasyonuPage.loginButonu.click();
 
