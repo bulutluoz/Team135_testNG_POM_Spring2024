@@ -1,0 +1,9 @@
+<!--
+    day11 package'inin tamamini,
+    day12 package'indan C03 ve C06'yi
+    day13 package'indan C01 altindaki gecersizPasswordMethod'unu
+    haftalik test olarak calistirin
+
+-->
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
