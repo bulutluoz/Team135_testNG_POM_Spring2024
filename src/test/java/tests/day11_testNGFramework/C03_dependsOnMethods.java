@@ -57,7 +57,7 @@ public class C03_dependsOnMethods {
 
     // Uc farkli test methodu olusturup asagidaki testleri yapin
     // 1- Testotomasyonu anasayfaya gidip, sayfaya gittigimizi test edin
-    @Test
+    @Test(groups = "haftalik")
     public void anasayfaTesti(){
         driver.get("https://www.testotomasyonu.com");
 
@@ -68,7 +68,7 @@ public class C03_dependsOnMethods {
     }
 
     // 2- Phone icin arama yapip, urun bulunabildigini test edin
-    @Test(dependsOnMethods = "anasayfaTesti")
+    @Test(dependsOnMethods = "anasayfaTesti",groups = "haftalik")
     public void phoneTesti(){
 
         WebElement aramaKutusu = driver.findElement(By.id("global-search"));
@@ -82,7 +82,7 @@ public class C03_dependsOnMethods {
     }
 
     // 3- ilk urune tiklayip, urun aciklamasinda case sensitive olmadan phone gectigini test edin
-    @Test(dependsOnMethods = "phoneTesti")
+    @Test(dependsOnMethods = "phoneTesti",groups = "haftalik")
     public void ilkUrunTesti(){
 
         driver.findElement(By.xpath("(//*[@*='product-box my-2  py-1'])[1]"))

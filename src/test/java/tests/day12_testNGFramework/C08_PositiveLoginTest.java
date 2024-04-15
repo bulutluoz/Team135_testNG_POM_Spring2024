@@ -9,7 +9,7 @@ import utilities.ReusableMethods;
 
 public class C08_PositiveLoginTest {
 
-    @Test
+    @Test(groups = "smoke")
     public void test01(){
         //1- https://www.testotomasyonu.com/ anasayfasina gidin
         Driver.getDriver().get(ConfigReader.getProperty("toUrl"));

@@ -16,19 +16,19 @@ public class C02_Priority {
      */
 
 
-    @Test
+    @Test(groups = "haftalik")
     public void wisequarterTest(){
 
         System.out.println("WiseQuarter testi calisti");
     }
 
-    @Test
+    @Test(groups = "haftalik")
     public void testOtomasyonuTest(){
 
         System.out.println("Testotomasyonu testi calisti");
     }
 
-    @Test(priority = -1)
+    @Test(priority = -1,groups = "haftalik")
     public void youtubeTest(){
 
         System.out.println("Youtube testi calisti");

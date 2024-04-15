@@ -8,7 +8,7 @@ import utilities.Driver;
 
 public class C09_NegativeLoginTesti {
 
-    @Test
+    @Test(groups = "smoke")
     public void test01(){
 
         //1- https://www.testotomasyonu.com/ anasayfasina gidin

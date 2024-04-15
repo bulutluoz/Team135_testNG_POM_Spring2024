@@ -9,7 +9,7 @@ import utilities.ReusableMethods;
 
 public class C03_DropdownTesti {
 
-    @Test
+    @Test(groups = {"haftalik","smoke"})
     public void test01(){
         //1 - https://testotomasyonu.com/form adresine gidin
         Driver.getDriver().get("https://testotomasyonu.com/form");

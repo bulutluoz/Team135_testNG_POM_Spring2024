@@ -4,6 +4,34 @@
     day13 package'indan C01 altindaki gecersizPasswordMethod'unu
     haftalik test olarak calistirin
 
+    Eger farkli hiyerarsilerde secimler varsa
+    uygun adimlardan kirilim yapabiliriz
+
+    verbose : konsolda yazilan aciklamalarin detay seviyesini belirler
+              10 en detayli
+              1  en kisa
+              olacak sekilde 1 ile 10 arasinda bir deger secilebilir
 -->
 
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="haftalik test suite'i" verbose="10">
+    <test name="haftalik test">
+
+       <packages>
+
+           <package name="tests.day11_testNGFramework"></package>
+
+       </packages>
+
+        <classes>
+            <class name="tests.day12_testNGFramework.C03_DropdownTesti"></class>
+            <class name="tests.day12_testNGFramework.C06_AramaTesti"></class>
+            <class name="tests.day13_TestNG_Assertions.C01_NegativeLoginTesti">
+                <methods>
+                    <include name="gecersizPasswordTesti"></include>
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+</suite>

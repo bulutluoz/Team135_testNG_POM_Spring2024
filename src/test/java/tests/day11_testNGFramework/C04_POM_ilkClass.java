@@ -25,7 +25,7 @@ public class C04_POM_ilkClass {
 
      */
 
-    @Test
+    @Test(groups = {"haftalik","smoke"})
     public void test01(){
 
         Driver.getDriver().get("https://www.testotomasyonu.com");

@@ -12,7 +12,7 @@ import java.util.List;
 
 public class C07_SoftAssertion {
 
-    @Test
+    @Test(groups = "smoke")
     public void test01(){
         // 1. “http://zero.webappsecurity.com/” Adresine gidin
         Driver.getDriver().get(ConfigReader.getProperty("zeroUrl"));

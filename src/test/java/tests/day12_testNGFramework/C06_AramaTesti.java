@@ -11,7 +11,7 @@ public class C06_AramaTesti {
 
     // iki test methodu olusturup, asagidaki gorevleri yapin
 
-    @Test
+    @Test(groups = "haftalik")
     public void phoneTesti(){
         // 1- test otomasyonu anasayfaya gidin
         Driver.getDriver().get("https:www.testotomasyonu.com");
@@ -25,7 +25,7 @@ public class C06_AramaTesti {
         Driver.quitDriver();
     }
 
-    @Test
+    @Test(groups = "haftalik")
     public void javaTesti(){
         // 2- test otomasyonu anasayfaya gidin
         Driver.getDriver().get("https:www.testotomasyonu.com");

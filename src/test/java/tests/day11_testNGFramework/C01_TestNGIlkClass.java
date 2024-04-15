@@ -30,7 +30,7 @@ public class C01_TestNGIlkClass {
         driver.quit();
     }
 
-    @Test
+    @Test(groups = "haftalik")
     public void test01(){
 
         // Testotomasyonu anasayfaya gidin
