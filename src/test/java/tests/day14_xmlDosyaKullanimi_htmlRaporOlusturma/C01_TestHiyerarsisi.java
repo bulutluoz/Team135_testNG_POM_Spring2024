@@ -1,4 +1,4 @@
-package tests.day14_xmlDosyaKullanimi;
+package tests.day14_xmlDosyaKullanimi_htmlRaporOlusturma;
 
 public class C01_TestHiyerarsisi {
     /*
