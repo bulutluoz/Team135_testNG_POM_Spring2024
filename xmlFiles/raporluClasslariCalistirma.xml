@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Raporlu test">
+    <test name="Rapolu testler">
+
+        <packages>
+            <package name="tests.day14_xmlDosyaKullanimi_htmlRaporOlusturma"></package>
+        </packages>
+
+    </test>
+</suite>
