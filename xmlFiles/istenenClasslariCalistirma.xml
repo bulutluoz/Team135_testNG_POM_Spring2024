@@ -1,0 +1,33 @@
+
+<!--
+            Smoke test icin asagidaki class'lari calistirin
+            day11 ==> C04
+            day12 ==> C03, C08, C09
+            day13 ==> C01, C07
+
+       .xml dosyalarinda, calistirmak istedigimiz
+       package, class, method veya gruplari secerken test hiyerarsisine uygun olarak
+       suite ve test taglari ile baslamaliyiz
+       bu iki tag'dan sonra bizden istenen goreve uygun olarak
+       calisacak  package, class, method veya gruplari secebiliriz
+-->
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="smoke test suite">
+    <test name="smoke test">
+
+        <classes>
+           
+            <class name="tests.day11_testNGFramework.C04_POM_ilkClass"></class>
+            <class name="tests.day12_testNGFramework.C03_DropdownTesti"></class>
+            <class name="tests.day12_testNGFramework.C08_PositiveLoginTest"></class>
+            <class name="tests.day12_testNGFramework.C09_NegativeLoginTesti"></class>
+            <class name="tests.day13_TestNG_Assertions.C01_NegativeLoginTesti"></class>
+            <class name="tests.day13_TestNG_Assertions.C07_SoftAssertion"></class>
+            
+        </classes>
+        
+        
+    </test>
+</suite>
