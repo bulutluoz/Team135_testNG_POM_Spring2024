@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.ConfigReader;
+import utilities.ReusableMethods;
 import utilities.TestBaseCross;
 
 public class C03_PozitifLoginTesti extends TestBaseCross {
@@ -14,6 +15,7 @@ public class C03_PozitifLoginTesti extends TestBaseCross {
         //1- https://www.testotomasyonu.com/ anasayfasina gidin
         driver.get(ConfigReader.getProperty("toUrl"));
         //2- account linkine basin
+        ReusableMethods.bekle(1);
         driver.findElement(By.xpath("//*[text()='Account']"))
                 .click();
         //3- Kullanici email'i olarak gecerli email girin
@@ -22,6 +24,7 @@ public class C03_PozitifLoginTesti extends TestBaseCross {
         //4- Kullanici sifresi olarak gecerli password girin
         driver.findElement(By.id("password"))
                 .sendKeys(ConfigReader.getProperty("toGecerliPassword"));
+        ReusableMethods.bekle(1);
         //5- Login butonuna basarak login olun
         driver.findElement(By.id("submitlogin"))
                 .click();

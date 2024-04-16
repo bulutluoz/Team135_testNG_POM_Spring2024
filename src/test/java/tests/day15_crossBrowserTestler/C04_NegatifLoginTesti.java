@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.ConfigReader;
+import utilities.ReusableMethods;
 import utilities.TestBaseCross;
 
 public class C04_NegatifLoginTesti extends TestBaseCross {
@@ -30,7 +31,7 @@ public class C04_NegatifLoginTesti extends TestBaseCross {
                 .sendKeys(ConfigReader.getProperty("toGecerliEmail"));
         driver.findElement(By.id("password"))
                 .sendKeys(ConfigReader.getProperty("toGecersizPassword"));
-
+        ReusableMethods.bekle(1);
         //4- Login butonuna basarak login olmayi deneyin
         driver.findElement(By.id("submitlogin"))
                 .click();
@@ -44,7 +45,7 @@ public class C04_NegatifLoginTesti extends TestBaseCross {
     public void gecersizEmailTesti(){
         //1- https://www.testotomasyonu.com/ anasayfasina gidin
         driver.get(ConfigReader.getProperty("toUrl"));
-
+        ReusableMethods.bekle(1);
         //2- account linkine basin
         driver.findElement(By.xpath("//*[text()='Account']"))
                 .click();
@@ -54,7 +55,7 @@ public class C04_NegatifLoginTesti extends TestBaseCross {
                 .sendKeys(ConfigReader.getProperty("toGecersizEmail"));
         driver.findElement(By.id("password"))
                 .sendKeys(ConfigReader.getProperty("toGecerliPassword"));
-
+        ReusableMethods.bekle(1);
         //4- Login butonuna basarak login olmayi deneyin
         driver.findElement(By.id("submitlogin"))
                 .click();
@@ -68,7 +69,7 @@ public class C04_NegatifLoginTesti extends TestBaseCross {
     public void gecersizEmailGecersizPasswordTesti(){
         //1- https://www.testotomasyonu.com/ anasayfasina gidin
         driver.get(ConfigReader.getProperty("toUrl"));
-
+        ReusableMethods.bekle(1);
         //2- account linkine basin
         driver.findElement(By.xpath("//*[text()='Account']"))
                 .click();
@@ -78,7 +79,7 @@ public class C04_NegatifLoginTesti extends TestBaseCross {
                 .sendKeys(ConfigReader.getProperty("toGecersizEmail"));
         driver.findElement(By.id("password"))
                 .sendKeys(ConfigReader.getProperty("toGecersizPassword"));
-
+        ReusableMethods.bekle(1);
         //4- Login butonuna basarak login olmayi deneyin
         driver.findElement(By.id("submitlogin"))
                 .click();
