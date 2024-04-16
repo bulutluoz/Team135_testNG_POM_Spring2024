@@ -1,5 +1,6 @@
 package tests.day15_dataProvider_crossbrowserTests;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -42,9 +43,15 @@ public class C02_DataProviderIleNegatifLoginTesti {
         testOtomasyonuPage.passwordKutusu.sendKeys(password);
         testOtomasyonuPage.loginButonu.click();
 
-        Assert.assertTrue(testOtomasyonuPage.emailKutusu.isEnabled());
+        try {
+            Assert.assertTrue(testOtomasyonuPage.emailKutusu.isEnabled());
+        } catch (NoSuchElementException e) {
+            // eger giris yapildi ise logout tusuna basarak logout olun
+            testOtomasyonuPage.logoutButonu.click();
+            throw new AssertionError(email+ " ile giris yapildi");
+        }
 
-        // eger giris yapildi ise logout tusuna basarak logout olun
+
 
     }
 }
