@@ -12,7 +12,7 @@
     <test name="firefox ile calisacak testler">
         <parameter name="kullanilacakBrowser" value="firefox"></parameter>
         <classes>
-            <class name="tests.day15_crossBrowserTestler.C01_ToAramaTesti"></class>
+            <class name="tests.day15_crossBrowserTestler.C02_IlkUrunTesti"></class>
         </classes>
     </test>
 
