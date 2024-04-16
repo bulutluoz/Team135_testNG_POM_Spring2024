@@ -13,6 +13,7 @@ public class C02_DataProviderIleNegatifLoginTesti {
 
     @DataProvider
     public static Object[][] emailVePasswordListesi() {
+        // Data provider must return Object[][] or Iterator<Object[]>
 
         String[][] emailVeSifreler ={   {"banu@gmail.com","898989"},
                                         {"sedat@yahoo.com","989887"},
